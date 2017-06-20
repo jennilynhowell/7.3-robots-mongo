@@ -1,0 +1,77 @@
+.index-container {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.user-thumbnail {
+  flex: 1 1 20%;
+  margin: 2%;
+  padding: 2%;
+  border: 1px solid #F1F1F1;
+}
+
+.avatar {
+  text-align: center;
+}
+
+.user-name {
+  padding: 5% 0;
+  font-size: 2rem;
+}
+
+a {
+  font-weight: bold;
+}
+
+.for-hire {
+  color: #CA6D64;
+}
+
+.profile-pic {
+  margin-right: 5%;
+  float: left;
+}
+
+.name-info h1 {
+  font-weight: lighter;
+}
+
+.img-circle {
+  width: 100px;
+  border: 1px solid #F1F1F1;
+}
+
+#location {
+  margin: 0;
+}
+
+#email {
+  margin-bottom: 15px;
+}
+
+.edu-skills {
+  margin-left: 10%;
+}
+
+.info-span, .skills-list {
+  margin-left: 5%;
+}
+
+.edu-section {
+  margin-bottom: 2%;
+}
+
+.edu-section li {
+  margin-left: 10%;
+}
+
+.skills-list {
+  margin-left: 17%;
+}
+
+.skills-list:nth-child(1){
+  margin-top: -21px;
+}

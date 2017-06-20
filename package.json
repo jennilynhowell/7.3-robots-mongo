@@ -1,0 +1,20 @@
+{
+  "name": "5.2-robot-database",
+  "version": "1.0.0",
+  "description": "user directory database",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "node",
+    "database"
+  ],
+  "author": "Jennilyn Howell",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3",
+    "mustache-express": "^1.2.4"
+  }
+}
