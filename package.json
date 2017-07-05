@@ -21,7 +21,7 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jennilynhowell/7.3-robots-mongo.git"
+    "url": "https://github.com/jennilynhowell/7.3-robots-mongo.git"
   },
   "bugs": {
     "url": "https://github.com/jennilynhowell/7.3-robots-mongo/issues"
