@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Employed Robots</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/styles.css">
+  </head>
+  <body class="container">
+    <h1>Currently Employed Robots</h1>
+
+    <section class="container">
+      <ul class="list-unstyled list-inline index-container">
+        {{#model}}
+        <ul class="list-unstyled user-thumbnail">
+          <li class="avatar"><img class="img-rounded" src="{{avatar}}" alt="My Photo"></li>
+          <li class="user-name"><a href="{{id}}">{{name}}</a></li>
+          <li>{{job}} {{company}}</li>
+          <li>{{^job}}{{/job}}</li>
+          <li class="for-hire">{{^company}}Available for Hire{{/company}}</li>
+        </ul>
+        {{/model}}
+      </ul>
+    </section>
+
+  </body>
+</html>

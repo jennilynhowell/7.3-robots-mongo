@@ -8,10 +8,14 @@
   </head>
   <body class="container">
     <h1>BeepIn: Networking for Robots</h1>
+    <ul class="list-unstyled list-inline">
+      <li><a href="/looking">Hire a Robot</a></li>
+      <li><a href="/hired">Employed Robots</a></li>
+    </ul>
 
     <section class="container">
       <ul class="list-unstyled list-inline index-container">
-        {{#users}}
+        {{#model}}
         <ul class="list-unstyled user-thumbnail">
           <li class="avatar"><img class="img-rounded" src="{{avatar}}" alt="My Photo"></li>
           <li class="user-name"><a href="{{id}}">{{name}}</a></li>
@@ -19,7 +23,7 @@
           <li>{{^job}}{{/job}}</li>
           <li class="for-hire">{{^company}}Available for Hire{{/company}}</li>
         </ul>
-        {{/users}}
+        {{/model}}
       </ul>
     </section>
 

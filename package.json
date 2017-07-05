@@ -1,7 +1,7 @@
 {
-  "name": "5.2-robot-database",
+  "name": "7.3-robots-mongo",
   "version": "1.0.0",
-  "description": "user directory database",
+  "description": "user directory using mongo db",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,6 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.15.3",
+    "mongodb": "^2.2.29",
     "mustache-express": "^1.2.4"
   }
 }
