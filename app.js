@@ -1,6 +1,7 @@
 const express = require('express');
 const mustacheExpress = require('mustache-express');
 const data = require('./data.js');
+const routes = require('./router');
 const MongoClient = require('mongodb').MongoClient;
 const app = express();
 
@@ -18,44 +19,50 @@ app.use(function(req, res, next) {
   })
 });
 
-app.get('/', function(req, res){
-  let context = {};
-  const col = req.db.collection('robotscol_jh');
-  let results = col.find({}).toArray((error, results)=>{
-    context.model = results;
-    res.render('index', context);
-  });
+app.get('/', function(req, res) {
+  res.redirect('/robots/');
 });
 
-app.get('/:id', function(req, res) {
-  let robot = req.params.id;
-  robot = parseInt(robot);
-  let context = {};
-  const col = req.db.collection('robotscol_jh');
-  let results = col.find({'id': robot}).toArray((error, results)=>{
-    context.model = results;
-    res.render('profile', context)
-  })
-});
+routes(app);
 
-app.get('/looking', function(req, res) {
-  let context = {};
-  const col = req.db.collection('robotscol_jh');
-  let results = col.find({'company': null}).toArray((error, results)=>{
-    console.log(results);
-    context.model = results;
-    res.render('looking', context)
-  });
-});
 
-app.get('/hired', function(req, res) {
-  let context = {};
-  const col = req.db.collection('robotscol_jh');
-  let results = col.find({'company': {$ne: null}}).toArray((error, results)=>{
-    console.log(results);
-    context.model = results;
-    res.render('hired', context)
-  });
-});
+// app.get('/', function(req, res){
+//   let context = {};
+//   const col = req.db.collection('robotscol_jh');
+//   let results = col.find({}).toArray((error, results)=>{
+//     context.model = results;
+//     res.render('index', context);
+//   });
+// });
+
+// app.get('/:id', function(req, res) {
+//   let robot = req.params.id;
+//   robot = parseInt(robot);
+//   let context = {};
+//   const col = req.db.collection('robotscol_jh');
+//   let results = col.find({'id': robot}).toArray((error, results)=>{
+//     context.model = results;
+//     res.render('profile', context);
+//   });
+// });
+
+// app.get('/robots/looking', function(req, res) {
+//   let context = {};
+//   const col = req.db.collection('robotscol_jh');
+//   let results = col.find({}).toArray((error, results)=>{
+//     context.model = results;
+//     res.render('looking', context);
+//   });
+// });
+
+// app.get('/robots/hired', function(req, res) {
+//   let context = {};
+//   const col = req.db.collection('robotscol_jh');
+//   let results = col.find({}).toArray((error, results)=>{
+//     console.log(results);
+//     context.model = results;
+//     res.render('hired', context);
+//   })
+// });
 
 app.listen(3000);
